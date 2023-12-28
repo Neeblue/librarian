@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Librarian.Views.ChosenBookView"
+			 xmlns:vm="using:Librarian.ViewModels"
+			 xmlns:views="clr-namespace:Librarian.Views">
+
+	<Grid>
+		<Image Name="BookCover"/>
+
+		<TextBlock Name="BookTitle"/>
+		<TextBlock Name="Subtitle"/>
+		<TextBlock Name="Description"/>
+		<TextBlock Name="PageCount"/>
+		<TextBlock Name="Publisher"/>
+		<TextBlock Name="PublishedDate"/>
+
+		<Button Name="BackButton"/>
+		<Button Name="SaveButton"/>
+	</Grid>
+	
+</UserControl>

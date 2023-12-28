@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Librarian.ViewModels"
+			 xmlns:views="clr-namespace:Librarian.Views"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Librarian.Views.RequestView"
+			 Background="#5386b5">
+	<Grid Margin="20 20 0 0">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="auto"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+		</Grid.RowDefinitions>
+
+		<!--Column 0 - Title and radio buttons-->
+		<TextBlock Text="Request a new book to be added to the collection:" Foreground="White" Margin="0 0 0 10" Grid.Row="0" Grid.ColumnSpan="4" FontSize="30"/>
+		<StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="10 0 0 0">
+			<RadioButton Content="Title" FontSize="20" Foreground="White" />
+			<RadioButton Content="ISBN" FontSize="20" Foreground="White" IsEnabled="False"/>
+		</StackPanel>
+
+		<!--Column 1 - User book name input-->
+		<TextBox Text="{Binding BookName}" FontSize="20" Foreground="Black" Background="#5386b5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" VerticalAlignment="Center" Width="250" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+		<!--Column 2 - Request button and reponse-->
+		<Button Content="Request" FontSize="20" VerticalAlignment="Center" Foreground="White" Grid.Row="1" Grid.Column="2" Command="{Binding RequestButtonCommand}"/>
+		<TextBlock Text="{Binding RequestResponse}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="3" Foreground="Yellow" Margin="10 0 0 0"/>
+	</Grid>
+</UserControl>
+

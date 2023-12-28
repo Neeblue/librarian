@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Librarian.ViewModels"
+		xmlns:views="clr-namespace:Librarian.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+		Width="1700" Height="1200"
+        x:Class="Librarian.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico" Title="Librarian" Closing="Window_Closing" Background="#5386b5" FontSize="30">
+
+	<Grid>
+		<TabControl BorderThickness="0">
+			<TabItem Header="Browse" Foreground="White" >
+				<views:BooksView Margin="1"/>
+			</TabItem>
+			<TabItem Header="Request" Foreground="White">
+				<views:RequestView/>
+			</TabItem>
+			<TabItem Header="Taken out" Foreground="White"/>
+		</TabControl>
+	</Grid>
+</Window>
